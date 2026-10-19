@@ -1,0 +1,14 @@
+title: Style Your Bestie
+tagline: My favorite Amazon finds, styled and ready to shop.
+author: Robin
+baseurl: /styleyourbestie
+url: https://bloomuponline.github.io
+amazon_tag: robinboateng-20
+storefront: https://www.amazon.com/shop/bloomuponline.digitalproducts
+instagram: https://www.instagram.com/styleyourbestie/
+permalink: /:year/:month/:day/:title/
+timezone: America/Chicago
+markdown: kramdown
+exclude:
+  - README.md
+  - POST-TEMPLATE.md
