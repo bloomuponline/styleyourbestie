@@ -11,7 +11,7 @@ layout: default
   {% for post in site.posts %}
   <li class="look">
     <a href="{{ post.url | relative_url }}">
-      {% if post.photos %}<img src="{{ post.photos[0].src | relative_url }}" alt="{{ post.photos[0].alt }}" width="1365" height="2048" loading="lazy">{% endif %}
+      {% if post.photos %}<img src="{% if post.photos[0].src contains '://' %}{{ post.photos[0].src }}{% else %}{{ post.photos[0].src | relative_url }}{% endif %}" alt="{{ post.photos[0].alt }}" width="1365" height="2048" loading="lazy">{% endif %}
       <span class="look-title">{{ post.title }}</span>
       <span class="look-date">{{ post.date | date: "%B %-d, %Y" }}</span>
     </a>

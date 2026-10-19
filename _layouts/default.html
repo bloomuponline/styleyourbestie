@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <meta name="description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 155 }}{% else %}{{ site.tagline }}{% endif %}">
-  {% if page.photos %}<meta property="og:image" content="{{ page.photos[0].src | absolute_url }}">{% endif %}
+  {% if page.photos %}<meta property="og:image" content="{% if page.photos[0].src contains '://' %}{{ page.photos[0].src }}{% else %}{{ page.photos[0].src | absolute_url }}{% endif %}">{% endif %}
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

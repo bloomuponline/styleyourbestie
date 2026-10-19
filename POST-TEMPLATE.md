@@ -3,10 +3,7 @@
 Each look is ONE file in `_posts/`, plus its three photos in `assets/images/<slug>/`.
 
 1. Pick the slug: the look's name in lowercase with hyphens, e.g. `pink-plaid-pumpkin-patch-outfit`.
-2. Save the three photos as:
-   - `assets/images/<slug>/basic.jpg`
-   - `assets/images/<slug>/styled.jpg`
-   - `assets/images/<slug>/lifestyle.jpg`
+2. Photos: use each photo's full Higgsfield result URL (https://...png) as `src`. If the photo files can be saved into the repo instead, put them at `assets/images/<slug>/basic.jpg`, `styled.jpg` and `lifestyle.jpg` and use those paths. Both work.
 3. Create `_posts/YYYY-MM-DD-<slug>.md` (date in America/Chicago) with the front matter below and nothing else.
 4. Commit to the `main` branch and push. GitHub Pages rebuilds the site by itself in a minute or two.
 5. The live post is at `https://bloomuponline.github.io/styleyourbestie/YYYY/MM/DD/<slug>/`.

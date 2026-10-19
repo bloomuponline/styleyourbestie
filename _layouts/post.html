@@ -12,7 +12,7 @@ layout: default
   <div class="photos">
     {% for photo in page.photos %}
     <figure class="photo photo-{{ forloop.index }}">
-      <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt }}" width="1365" height="2048" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+      <img src="{% if photo.src contains '://' %}{{ photo.src }}{% else %}{{ photo.src | relative_url }}{% endif %}" alt="{{ photo.alt }}" width="1365" height="2048" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
     </figure>
     {% endfor %}
   </div>
